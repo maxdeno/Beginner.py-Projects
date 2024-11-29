@@ -1,0 +1,86 @@
+The Hangman game.
+This is a simple guessing game designed using python script, where the player has to guess the letters in a word within
+a certain number of attempts.
+The scripts focus on using the while loop, if statement, functions, dictionary and variables.
+
+format.
+imports
+dictionary
+functions
+(while and if statement)
+
+imports.
+first, we import the random module, this enables us to use the random attributes and methods. such as random.choice()
+second, we import the words from the wordlist module, this makes our code look clean, as the words as just accessed from
+another module instead of polluting the hangman script.
+Third, we import the emoji converter() from the emoji converter program. It's used to beautify our output(with emojis)
+
+dictionary
+we set key=value pairs in a dictionary and assign them to the variable hangman_art.
+The key=value pairs are the number of attempts[0,1,2,3] and their values are the "art marks" that are to be printed in
+the terminal if the number of attempts is called.
+
+functions
+we have for functions:
+def display_man(wrong_guesses)
+This function displays the values of the keys in the dictionary string. when a user guesses a letter wrongly.
+it is called and depending the wrong_guess values the "arts mark" is displayed on the terminal.
+Also, contains the $$$$$ and ****** that are printed to the terminal.
+
+def display_hint(hint)
+access the hint from the answer parameter, which is linked to the main function.
+it the separates the letters in the word using white spaces, instead of the letters. it assigns an underscore.
+
+def display_answer(answer)
+access the word from the answer parameter, which is linked to the main function.
+it the separates the letters in the word using white spaces.
+
+
+def main()
+This main function of the program.
+it has  an answer, hint, wrong_guesses, guessed_letters and is_running variables
+
+The variables do the following:
+answer access the random choice method, which selects a word randomly from the set of words in wordlist module.
+hint access the the answer variable, checks the number of letters in the words and uses an underscore as it's output
+rather than the letter of the word.
+wrong_guess access the key in the dictionary variable
+guessed_letters access a empty set, which will be used when a letter is entered in the terminal.
+is_running access the boolean true, which stipulates the program is functions
+
+loops and statements in the main() function
+while loop
+As long as the is_running is true execute the subsequent code.
+display_man(wrong_guess)
+display_hint(hint)
+guess variable which access the input the user enters
+
+The if statements also are to be executed that is why the are dented in the while loop.
+ if statements:
+ 1.This if statement evaluates the guess value(letter), if it is a numerical values or greater than one letter
+ it prints the invalid input arguments.
+
+ 2.This if statement compares the guess value to the answer variable.
+ it irritates over length of the answer comparing the letters, if it finds the letters match it passes the guessed
+ letter to the hint variable which prints it in the terminal.
+ else it increments the wrong_guess argument which prints it subsequent value onto the terminal
+
+ guessed_letters.add(guess). it adds the correct letter in the empty set that is assigned to the guessed_letter variable.
+
+ 3.This if else statement, checks the guess(letter) if it is in the guessed_letter variable, if it is.
+ it prints "The letter exists"
+
+ 4. This if else statements checks if the "_" is not present. if it is not, it proceeds to print the win statement, with
+ an emoji. it exit the program(is_running=False)
+ it also calls the display_man function and display_answer function
+
+ the elif comes about when the if, is not true.i.e the "_" is present, it proceeds to print you lose with an emoji and
+ exit the program(is_running = False)
+
+ The display_man() function checks whether the wrong_guess limit has not exceed and continues with execution
+ if it has and the user has not guessed the correct words it prints the hangman, and uses the elif statement.
+The display_hint() function displays the word that was selected randomly.
+
+ if __name__ == "__main__":
+    main()
+    when hangman project is called, it passes to the main function and starts executing.
