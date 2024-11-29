@@ -1,0 +1,15 @@
+This is tic-tac-toe game
+it's a two player game where players take turn placing X's and 0's on a 3X3 board.
+The game utilises the conditional statements and a nested loop
+
+The player selects a random between 1 and 9.
+The number is checked if, it's in place. if not the number is printed on the boord as letter X or O.
+
+To win the game, one player's letter must match either horizontally, diagonally or vertically.
+After winning the game, a message is displayed on the dashboard with letter the assigned to the player.
+
+Also, players can tie. that is if the board has accumulated all the letters from both sides.
+
+The computer is being used, as a second player to make the game interactive.
+
+welcome. Let's play and good luck.
