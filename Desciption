@@ -1,0 +1,12 @@
+The alarm clock project with tkinter GUI.
+it allows user to set an alarm and receive a notification when it goes off.
+
+lesson learnt:
+How to work with datetime module. Setting the specified alarm to synchronize with the current time
+The sleep method is way to reset the time when the time changes, from sec to sec initially.
+Threading, how to set a process in the background. The date time checker runs in the background and tries to evaluate the
+set_alarm() and the alarm().
+Using combobox. wonder how small boxes are created on various interfaces, well now I not only know but I can create them.
+finally, loading a music file to an application. That's cool.
+
+As the alarm says, Rise and shine!
